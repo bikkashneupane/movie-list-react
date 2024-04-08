@@ -68,17 +68,6 @@ export const SearchForm = ({ addToMovieList }) => {
             <div className="">Movie Not found</div>
           )}
         </div>
-
-        {/* {searchedMovie.Response === "True" && (
-          <CustomCard
-            searchedMovie={searchedMovie}
-            movieType={movieType}
-            handleOnDelete={handleOnDelete}
-          />
-        )}
-        {searchedMovie.Response === "False" && (
-          <div className="">Movie Not found</div>
-        )} */}
       </div>
     </div>
   );
