@@ -21,8 +21,14 @@ function App() {
   };
 
   return (
-    <div className="container text-warning">
-      <div className="row">
+    <div
+      className="container shadow-lg rounded-4 pb-1 custom-border "
+      style={{
+        marginTop: "20px",
+        width: "80vw",
+      }}
+    >
+      <div className="row ps-5 pe-5">
         <div className="col">
           <h1 className="mt-5 text-center">My Movie Collection</h1>
           <hr />
@@ -30,7 +36,6 @@ function App() {
       </div>
 
       <SearchForm addToMovieList={addToMovieList} />
-
       <Display movieList={movieList} handleOnDelete={handleOnDelete} />
     </div>
   );

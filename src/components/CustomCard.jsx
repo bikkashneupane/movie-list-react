@@ -5,16 +5,21 @@ import React, { useState } from "react";
 export const CustomCard = ({ searchedMovie, movieType, handleOnDelete }) => {
   const { Poster, Title, Plot, imdbRating, imdbID, mode } = searchedMovie;
   return (
-    <div className="card flex-grow-1" style={{ width: "18rem" }}>
-      <img src={Poster} className="card-img-top" alt="..." />
-      <div className="container">
+    <div className="card " style={{ width: "394px", maxHeight: "485px" }}>
+      <img
+        src={Poster}
+        className="card-img-top"
+        alt="..."
+        style={{ height: "200px" }}
+      />
+      <div className="container d-flex flex-column justify-content-between">
         <div className="card-body">
           <h6 className="card-title">{Title}</h6>
           <p className="card-text">IMDB Rating: {imdbRating}</p>
-          <p className="card-text">{Plot?.slice(0, 50)}...</p>
+          <p className="card-text">{Plot?.slice(0, 80)}...</p>
         </div>
         {!mode && (
-          <div className="d-flex justify-content-between gap-2">
+          <div className="d-grid gap-2">
             <button
               className="btn btn-warning flex-grow-1"
               onClick={() => movieType("drama")}
@@ -30,7 +35,7 @@ export const CustomCard = ({ searchedMovie, movieType, handleOnDelete }) => {
           </div>
         )}
 
-        <div className="d-grid mt-2 mb-4">
+        <div className="d-grid mt-2 pb-3">
           <button
             onClick={() => handleOnDelete(imdbID)}
             className="btn btn-danger"

@@ -16,7 +16,7 @@ export const Display = ({ movieList, handleOnDelete }) => {
   };
 
   return (
-    <div className="bg-black mt-5 p-5 rounded">
+    <div className=" mb-2 p-5 pt-2 pb-2 rounded-4">
       <div
         className="btn-group"
         role="group"

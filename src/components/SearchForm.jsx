@@ -38,7 +38,7 @@ export const SearchForm = ({ addToMovieList }) => {
   };
 
   return (
-    <div className="bg-black p-5 rounded shadow-lg">
+    <div className=" p-5 pb-0 rounded shadow-lg ">
       <div className="row g-3">
         <div className="col-md">
           <form action="" onSubmit={handleOnSubmit}>
@@ -56,19 +56,22 @@ export const SearchForm = ({ addToMovieList }) => {
             </div>
           </form>
         </div>
-        <div className="col-md d-flex">
+        <div className="col-md d-flex justify-content-center">
           {searchedMovie.Response === "True" && (
-            <CustomCard
-              searchedMovie={searchedMovie}
-              movieType={movieType}
-              handleOnDelete={handleOnDelete}
-            />
+            <div className="w-100">
+              <CustomCard
+                searchedMovie={searchedMovie}
+                movieType={movieType}
+                handleOnDelete={handleOnDelete}
+              />
+            </div>
           )}
           {searchedMovie.Response === "False" && (
             <div className="">Movie Not found</div>
           )}
         </div>
       </div>
+      <hr />
     </div>
   );
 };
