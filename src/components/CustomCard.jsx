@@ -5,14 +5,14 @@ import React, { useState } from "react";
 export const CustomCard = ({ searchedMovie, movieType, handleOnDelete }) => {
   const { Poster, Title, Plot, imdbRating, imdbID, mode } = searchedMovie;
   return (
-    <div className="card " style={{ width: "394px", maxHeight: "485px" }}>
+    <div className="card " style={{ maxWidth: "394px", maxHeight: "485px" }}>
       <img
         src={Poster}
         className="card-img-top"
         alt="..."
         style={{ height: "200px" }}
       />
-      <div className="container d-flex flex-column justify-content-between">
+      <div className="container d-flex flex-grow-1 flex-column justify-content-between">
         <div className="card-body">
           <h6 className="card-title">{Title}</h6>
           <p className="card-text">IMDB Rating: {imdbRating}</p>

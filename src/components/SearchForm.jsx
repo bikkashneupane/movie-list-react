@@ -38,9 +38,9 @@ export const SearchForm = ({ addToMovieList }) => {
   };
 
   return (
-    <div className=" p-5 pb-0 rounded shadow-lg ">
+    <div className=" ps-5 pe-5 rounded shadow-lg ">
       <div className="row g-3">
-        <div className="col-md">
+        <div className="col-md-6">
           <form action="" onSubmit={handleOnSubmit}>
             <div className="mb-2">
               <input
@@ -56,7 +56,7 @@ export const SearchForm = ({ addToMovieList }) => {
             </div>
           </form>
         </div>
-        <div className="col-md d-flex justify-content-center">
+        <div className="col-md-6">
           {searchedMovie.Response === "True" && (
             <div className="w-100">
               <CustomCard

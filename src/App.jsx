@@ -22,10 +22,10 @@ function App() {
 
   return (
     <div
-      className="container shadow-lg rounded-4 pb-1 custom-border "
+      className="container pb-1 "
       style={{
         marginTop: "20px",
-        width: "80vw",
+        minWidth: "100vw",
       }}
     >
       <div className="row ps-5 pe-5">
