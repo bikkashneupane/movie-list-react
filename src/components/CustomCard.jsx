@@ -5,29 +5,34 @@ import React, { useState } from "react";
 export const CustomCard = ({ searchedMovie, movieType, handleOnDelete }) => {
   const { Poster, Title, Plot, imdbRating, imdbID, mode } = searchedMovie;
   return (
-    <div className="card " style={{ maxWidth: "394px" }}>
+    <div
+      className="card custom-card"
+      style={
+        !mode ? { maxWidth: "394px" } : { maxWidth: "394px", height: "470px" }
+      }
+    >
       <img
         src={Poster}
         className="card-img-top"
         alt="..."
         style={{ height: "200px" }}
       />
-      <div className="container d-flex flex-grow-1 flex-column justify-content-between">
+      <div className="d-flex flex-grow-1 flex-column justify-content-between p-1">
         <div className="card-body">
           <h6 className="card-title">{Title}</h6>
           <p className="card-text">IMDB Rating: {imdbRating}</p>
-          <small className="card-text">{Plot?.slice(0, 80)}...</small>
+          <small className="">{Plot?.slice(0, 80)}...</small>
         </div>
         {!mode && (
-          <div className="d-grid gap-2">
+          <div className="d-flex gap-1">
             <button
-              className="btn btn-warning flex-grow-1"
+              className="btn btn-warning w-50"
               onClick={() => movieType("drama")}
             >
               Drama
             </button>
             <button
-              className="btn btn-info flex-grow-1"
+              className="btn btn-info w-50"
               onClick={() => movieType("action")}
             >
               Action
@@ -35,14 +40,12 @@ export const CustomCard = ({ searchedMovie, movieType, handleOnDelete }) => {
           </div>
         )}
 
-        <div className="d-grid mt-2 pb-3">
-          <button
-            onClick={() => handleOnDelete(imdbID)}
-            className="btn btn-danger"
-          >
-            Delete
-          </button>
-        </div>
+        <button
+          onClick={() => handleOnDelete(imdbID)}
+          className="btn btn-danger mt-2 w-100"
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

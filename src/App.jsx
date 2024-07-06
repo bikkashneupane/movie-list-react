@@ -21,23 +21,23 @@ function App() {
   };
 
   return (
-    <div
-      className="container pb-1 "
-      style={{
-        marginTop: "20px",
-        minWidth: "100vw",
-      }}
-    >
-      <div className="row ps-5 pe-5">
-        <div className="col">
-          <h1 className="mt-5 text-center">My Movie Collection</h1>
-          <hr />
-        </div>
+    <>
+      <div className="row px-5 pt-2">
+        <h4 className="">Movie Watch List</h4>
+        <hr />
       </div>
 
-      <SearchForm addToMovieList={addToMovieList} />
-      <Display movieList={movieList} handleOnDelete={handleOnDelete} />
-    </div>
+      <div
+        className="container pb-1 "
+        style={{
+          marginTop: "20px",
+          minWidth: "100vw",
+        }}
+      >
+        <SearchForm addToMovieList={addToMovieList} />
+        <Display movieList={movieList} handleOnDelete={handleOnDelete} />
+      </div>
+    </>
   );
 }
 

@@ -1,49 +1,15 @@
 body {
-  background: #000;
-  color: yellow;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.custom-border {
   background: black;
-  border: 1px solid white;
+  color: yellow;
+  font-family: sans-serif;
 }
 
-.custom-row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 5px;
+.custom-card {
+  border: 2px solid #fff; /* White border */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* White shadow */
+  transition: transform 0.3s; /* Optional: smooth hover effect */
 }
 
-@media screen and (max-width: 600px) {
-  .custom-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .custom-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .custom-row {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .custom-row {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .custom-row {
-    grid-template-columns: repeat(6, 1fr);
-  }
+.custom-card:hover {
+  transform: scale(1.02); /* Optional: slightly enlarge on hover */
 }
