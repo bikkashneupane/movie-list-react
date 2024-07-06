@@ -38,8 +38,8 @@ export const SearchForm = ({ addToMovieList }) => {
   };
 
   return (
-    <div className=" ps-5 pe-5 rounded shadow-lg ">
-      <div className="row g-3">
+    <div className="ps-5 pe-5 rounded shadow-lg">
+      <div className="row g-3 d-flex justify-content-center">
         <div className="col-md-6">
           <form action="" onSubmit={handleOnSubmit}>
             <div className="mb-2">
@@ -51,14 +51,12 @@ export const SearchForm = ({ addToMovieList }) => {
                 required
               />
             </div>
-            <div className="d-grid">
-              <button className="btn btn-warning">Search Movie</button>
-            </div>
+            <button className="btn btn-warning w-100">Search Movie</button>
           </form>
         </div>
         <div className="col-md-6">
           {searchedMovie.Response === "True" && (
-            <div className="w-100">
+            <div>
               <CustomCard
                 searchedMovie={searchedMovie}
                 movieType={movieType}

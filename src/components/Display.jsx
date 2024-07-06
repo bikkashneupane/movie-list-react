@@ -49,18 +49,16 @@ export const Display = ({ movieList, handleOnDelete }) => {
         <p className="mt-3">{displayMovie.length} movies listed</p>
       </div>
 
-      <div className="row mt-3">
-        <div className="col d-flex flex-wrap gap-2">
-          {displayMovie.map((movie) => {
-            return (
-              <CustomCard
-                key={movie.imdbID}
-                searchedMovie={movie}
-                handleOnDelete={handleOnDelete}
-              />
-            );
-          })}
-        </div>
+      <div className="custom-row">
+        {displayMovie.map((movie) => {
+          return (
+            <CustomCard
+              key={movie.imdbID}
+              searchedMovie={movie}
+              handleOnDelete={handleOnDelete}
+            />
+          );
+        })}
       </div>
     </div>
   );
